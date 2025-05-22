@@ -1,15 +1,17 @@
 {
   "name": "privatni-casovi",
-  "main": "expo-router/entry",
+  "main": "App.js",
   "version": "1.0.0",
-  "scripts": {
-    "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "lint": "expo lint"
-  },
+"scripts": {
+  "start": "expo start",
+  "reset-project": "node ./scripts/reset-project.js",
+  "android": "expo start --android",
+  "ios": "expo start --ios",
+  "web": "expo start --web",
+  "lint": "expo lint",
+  "web-build": "expo export:web"
+},
+
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
     "@react-native-async-storage/async-storage": "^2.1.2",
@@ -49,6 +51,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@expo/webpack-config": "^19.0.1",
     "@types/react": "~19.0.10",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
