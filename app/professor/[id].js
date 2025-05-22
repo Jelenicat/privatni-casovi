@@ -188,6 +188,7 @@ export default function ProfessorProfile() {
           <Text style={styles.infoText}>🎓 {Object.entries(professor.nivoi || {}).filter(([, v]) => v).map(([k]) => k).join(', ')}</Text>
           <Text style={styles.infoText}>📍 {Object.entries(professor.gradovi || {}).filter(([, v]) => v).map(([k]) => k).join(', ')}</Text>
           <Text style={styles.infoText}>💰 {professor.cena ? `${professor.cena} RSD` : 'Nije navedena'}</Text>
+          <Text style={styles.infoText}>⭐ Prosečna ocena: {professor.prosecnaOcena || 'N/A'}</Text>
           {professor.opis ? (
   <>
     <Text style={styles.section}>🧾 O profesoru</Text>
@@ -195,7 +196,7 @@ export default function ProfessorProfile() {
   </>
 ) : null}
 
-          <Text style={styles.infoText}>⭐ Prosečna ocena: {professor.prosecnaOcena || 'N/A'}</Text>
+          
 
           <Text style={styles.section}>📅 Dostupni termini</Text>
           <Calendar
